@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pranish Karki</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Navbar Styles */
+/* Navbar Styles */
+nav {
+    /* Fully transparent background */
+    color: #fff; /* Default text color (not used in links) */
+    padding: 20px 30px; /* Padding */
+    position: fixed; /* Fixed position for scrolling effect */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it sits above other content */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Navbar Links */
+nav ul {
+    list-style: none;
+    display: flex; /* Flex layout for links */
+    justify-content: center; /* Center links within the ul */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem; /* Margin between links */
+    position: relative; /* For the underline effect */
+}
+
+nav ul li a {
+    color: #010101; /* Change link color to a shade of blue */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Font size */
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    color: #dff9fb; /* Change link color to a light color on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Underline effect on hover */
+nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the line below the text */
+    width: 100%;
+    height: 2px; /* Height of the underline */
+    background: #dff9fb; /* Color of the underline */
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Animation for the underline */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+/* Menu Toggle for mobile */
+.menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 1.8rem; /* Increased size for better visibility */
+    cursor: pointer;
+    color: #000000; /* Icon color */
+    justify-content: left; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px; /* Reduced padding on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on nav height */
+        right: 0;
+        width: 100%; /* Full width */
+        background: linear-gradient(90deg, #1abc9c, #16a085);/* Semi-transparent background for mobile menu */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+        padding: 15px 0; /* Add padding */
+    }
+
+    nav ul.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between links on mobile */
+        text-align: center; /* Center text in mobile view */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+}
+
+
+
+        /* Styles for the rest of your page... */
+        #education {
+            padding-top: 60px; /* Adjust based on the height of your nav bar */
+            margin-top: -60px; /* Pulls the section up to align with the top of the viewport */
+        }
+
+        /* Style for the round profile picture */
+        .profile-pic {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px;
+            border-radius: 50%; /* Makes the image round */
+            display: block;
+            margin: 20px auto; /* Centers the image */
+            object-fit: cover; /* Ensures the image fills the circular shape */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="menu-toggle"  style="  justify-content:left; ">☰</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education / Skill</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="overlay">
+            <h2 style="font-size: 150%;">HELLO! 
+                I am Pranish Karki</h2>
+                <br>
+                <div class="logo-container">
+                    <img src="phone.png" alt="Phone Logo" class="logo">
+                    <h3><a href="tel:9745653715" class="phone-link">9745653715</a></h3>
+                </div>
+                
+            <div class="logo-container">
+                <br>
+                <br>
+                <a href="https://github.com/pranishkarki" target="_blank">
+                    <img src="github.png" alt="GitHub Logo" class="logo">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpDfpnFjZVvhWBKphdRFbfQvTkvbLDplKKHmlTGvzmKJsmbRKhFqmFzMBPqlgthVprbGSJ" target="_blank">
+                    <img src="email.png" alt="GitHub Logo" class="logo">
+                </a>
+                <a href="https://www.instagram.com/pranish_karki9/" target="_blank">
+                    <img src="instagram.png" alt="Instagram Logo" class="logo">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100093978886722" target="_blank">
+                    <img src="facebook.png" alt="Facebook Logo" class="logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <h1 style="font-family: 'Times New Roman', Times, serif;">About Me</h1>
+        <img src="mypic.jpg" alt="My Image" class="profile-pic">
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Hi <br> I am Pranish Karki and I am a 12th-grade student.<br>
+            Passionate about web development and design, always exploring new technologies and techniques. I love turning ideas into reality and creating user-friendly experiences.
+        </p>
+    </section>
+
+    <!-- Education and Skills Section -->
+    <section id="education-skills" class="education-skills section">
+        <br>
+        <div class="education" id="education">
+            <h2 style="text-align: center;">Education</h2>
+            <div class="education-item">
+                <h3> +2 </h3>
+                <p><a href="https://sci.globalcollege.edu.np/"> Global School of Science </a>  <br>
+                    Status: Currently Studying<br>
+                    Stream: Science (Physical group)
+                </p>
+            </div>
+            <div class="education-item">
+                <h3>style="text-align: center; School </h3>
+                <p><a href="https://las.edu.np" > Little Angels School </a><br>
+                    Status: PASSED <br>
+                    Year: 2081 BS / 2022 AD
+                </p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills" id="skills">
+            <h2 style="text-align: center;">Technical-Skills</h2>
+            <div class="skill-set">
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">C-programming</div>
+                <div class="skill">PYTHON [Learning]</div>
+                <div class="skill">Basic Photo Editing</div>
+                <div class="skill">Basic Video Editing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="coding-projects">
+                <h3>Coding Projects</h3>
+                <div class="project">
+                    <h4>Project 1: ED-Tech</h4>
+                    <p>A website I developed with a responsive design.</p>
+                    <a href="https://github.com/Mrkarki20/educational-website" class="project-link">View Project on GitHub</a>
+                </div>
+                <div class="project">
+                    <h4>Project 2: Portfolio Website</h4>
+                    <p>A website I built using HTML, CSS, and JavaScript.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="non-coding-projects">
+                <h3>Non-Coding Projects</h3>
+                <div class="project">
+                    <h4>Project 3: Diwali Greeting Card</h4>
+                    <p>A vibrant Diwali greeting card designed for social media.</p>
+                    <img src="diwali-card.jpg" alt="Diwali Greeting Card" class="project-image" onclick="openModal('diwali-card.jpg')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+        <h2>Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <img src="volleyball.png" alt="Volleyball Achievement" onclick="openModal('volleyball.png')">
+                <h3>Runner-up</h3>
+                <p>Had been a runner-up in volleyball in college</p>
+            </div>
+            <div class="achievement-item">
+                <img src="python.png" alt="Certificate 1" onclick="openModal('python.png')">
+                <h3>Basic Python Course Certificate</h3>
+                <p>Completed a basic python course</p>
+            </div>
+            <div class="achievement-item">
+                <img src="html.png" alt="HTML Course Completion" onclick="openModal('html.png')">
+                <h3>HTML Course Completion</h3>
+                <p>Got the certificate from Sololeran after learning HTML</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Fullscreen Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Portfolio | Designed by Pranish Karki</p>
+    </footer>
+
+    <script>
+      // Function to check if an element is in the viewport
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to add 'animate' class when element is in view
+function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.section');
+    elements.forEach(el => {
+        if (isInViewport(el)) {
+            el.classList.add('animate');
+        }
+    });
+}
+
+// Trigger animations when scrolling
+window.addEventListener('scroll', handleScrollAnimation);
+
+// Trigger animations on load for any visible elements
+window.addEventListener('load', handleScrollAnimation);
+
+// Function to open the modal and show the image
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modal.style.display = 'block'; // Show the modal
+    modalImage.src = imageSrc; // Set the image source
+}
+
+// Function to close the modal when clicked
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none'; // Hide the modal
+}
+
+// Menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const navMenu = document.querySelector('nav ul');
+
+    // Toggle menu visibility
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show'); // Toggle the 'show' class
+    });
+
+    // Close the menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('show'); // Remove the 'show' class to close the menu
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
